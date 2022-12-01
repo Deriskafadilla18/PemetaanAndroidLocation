@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/btn_circle_gradient"
+    tools:context=".BantuanActivity">
+
+    <LinearLayout
+        android:layout_marginTop="80dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/logo_apk"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:textSize="14sp"
+            android:fontFamily="@font/ss_regular"
+            android:textColor="@color/colorWhite"
+            android:paddingHorizontal="75dp"
+            android:gravity="center"
+            android:text="Jika Terdapat Kendala dalam Penggunaan Aplikasi Pemetaan Lokasi Penduduk ini, dapat Dilihat Video Berikut, Apabila Kurang Jelas Mohon Hubungi Admin Dibawah ini"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:textSize="14sp"
+            android:fontFamily="@font/ss_semibold"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:text="ADMIN 1 : "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textSize="14sp"
+            android:fontFamily="@font/ss_regular"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:text="deriskafadillam18@gmail.com"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:textSize="14sp"
+            android:fontFamily="@font/ss_semibold"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:text="ADMIN 2 : "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textSize="14sp"
+            android:fontFamily="@font/ss_regular"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:text="085723393512 (TLP / WA)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:textSize="14sp"
+        android:fontFamily="@font/ss_semibold"
+        android:textColor="@color/colorWhite"
+        android:gravity="center"
+        android:text="Terima Kasih"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:background="@drawable/img"
+    tools:context=".ProfileActivity" >
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/colorPrimaryDark"
+        android:padding="12dp"
+        android:onClick="showMenu"
+        android:src="@drawable/ic_more_menu" />
+
+
+    <RelativeLayout
+        android:id="@+id/_navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="37dp"
+        android:paddingVertical="15dp">
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/NIK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username_dashboard"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ss_regular"
+        android:text="NIK" />
+    <!--        -->
+
+
+    <TextView
+        android:id="@+id/nik_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/NIK"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        android:text="[nik_user]"
+            android:fontFamily="@font/ss_bold"
+        android:textSize="18dp" />
+
+    <!--        </LinearLayout>-->
+
+    <TextView
+        android:id="@+id/nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nik_profile"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ss_regular"
+        android:text="Nama" />
+    <!--        -->
+
+    <TextView
+        android:id="@+id/nama_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nama"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        android:text="[nama_user]"
+        android:fontFamily="@font/ss_bold"
+        android:textSize="18dp" />
+    <!--    -->
+
+    <TextView
+        android:id="@+id/ttl"
+        android:text="Tempat, Tanggal Lahir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ss_regular"
+        android:layout_below="@+id/nama_profile"/>
+    <!--    -->
+
+    <TextView
+        android:id="@+id/ttl_profile"
+        android:text="[ttl_user]"
+        android:textSize="18dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ss_bold"
+        android:layout_below="@+id/ttl"/>
+    <!--    -->
+
+    <TextView
+        android:id="@+id/jk"
+        android:text="Jenis Kelamin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ss_regular"
+        android:layout_below="@+id/ttl_profile"/>
+    <!--    -->
+    <TextView
+        android:id="@+id/jk_profile"
+        android:text="[jk_user]"
+        android:textSize="18dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ss_bold"
+        android:layout_below="@+id/jk"/>
+    <!--    -->
+
+    <TextView
+        android:id="@+id/agama"
+        android:text="Agama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ss_regular"
+        android:layout_below="@+id/jk_profile"/>
+    <!--    -->
+    <TextView
+        android:text="[agama_user]"
+        android:id="@+id/agama_profile"
+        android:textSize="18dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ss_bold"
+        android:layout_below="@+id/agama"/>
+
+    <LinearLayout
+        android:id="@+id/layoutmap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Latitude"/>
+        <TextView
+            android:id="@+id/latitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_alignParentEnd="true"
+            android:text="..."/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Longitude"/>
+        <TextView
+            android:id="@+id/longitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_alignParentEnd="true"
+            android:text="..."/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Altitude"/>
+        <TextView
+            android:id="@+id/altitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_alignParentEnd="true"
+            android:text="..."/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Akurasi"/>
+        <TextView
+            android:id="@+id/akurasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_alignParentEnd="true"
+            android:text="..."/>
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btn_find"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:textAllCaps="false"
+        android:text="Cari"/>
+    <Button
+        android:id="@+id/btn_simpan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:textAllCaps="false"
+        android:text="Simpan Lokasi" />
+<!--    <ProgressBar-->
+<!--        android:visibility="gone"-->
+<!--        android:id="@+id/progress_simpan"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"/>-->
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/back"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />-->
+
+
+</LinearLayout>
+
+</ScrollView>

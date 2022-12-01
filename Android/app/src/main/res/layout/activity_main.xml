@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:background="@drawable/img"
+    tools:context=".MainActivity" >
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/colorPrimary"
+        android:onClick="showMenu"
+        android:padding="12dp"
+        android:src="@drawable/ic_more_menu" />
+
+
+    <RelativeLayout
+        android:id="@+id/_navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="37dp"
+        android:paddingVertical="15dp">
+
+        <ImageView
+            android:id="@+id/_image1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/kota" />
+
+        <TextView
+            android:id="@+id/_textview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/_image1"
+            android:text="@string/siPLP"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+        <!--        android:fontFamily="@font/ss_bold"-->
+
+        <TextView
+            android:id="@+id/_textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/_textview1"
+            android:layout_toRightOf="@id/_image1"
+            android:text="@string/desa"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+        <!--        android:fontFamily="@font/ss_bold"-->
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/NIK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username_dashboard"
+        android:text="NIK" />
+    <!--        android:fontFamily="@font/ss_regular"-->
+
+
+    <TextView
+        android:id="@+id/nik_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/NIK"
+        android:layout_marginTop="5dp"
+        android:text="[nik_user]"
+        android:textSize="18dp" />
+    <!--        android:fontFamily="@font/ss_bold"-->
+    <!--        </LinearLayout>-->
+
+    <TextView
+        android:id="@+id/nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nik_profile"
+        android:text="Nama" />
+    <!--        android:fontFamily="@font/ss_regular"-->
+
+    <TextView
+        android:id="@+id/nama_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nama"
+        android:layout_marginTop="5dp"
+        android:text="[nama_user]"
+        android:textSize="18dp" />
+    <!--    android:fontFamily="@font/ss_bold"-->
+
+    <TextView
+        android:id="@+id/ttl"
+        android:text="Tempat, Tanggal Lahir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nama_profile"/>
+    <!--    android:fontFamily="@font/ss_regular"-->
+
+    <TextView
+        android:id="@+id/ttl_profile"
+        android:text="[ttl_user]"
+        android:textSize="18dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ttl"/>
+    <!--    android:fontFamily="@font/ss_bold"-->
+
+    <TextView
+        android:id="@+id/jk"
+        android:text="Jenis Kelamin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ttl_profile"/>
+    <!--    android:fontFamily="@font/ss_regular"-->
+    <TextView
+        android:id="@+id/jk_profile"
+        android:text="[jk_user]"
+        android:textSize="18dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jk"/>
+    <!--    android:fontFamily="@font/ss_bold"-->
+
+    <TextView
+        android:id="@+id/agama"
+        android:text="Agama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jk_profile"/>
+    <!--    android:fontFamily="@font/ss_regular"-->
+    <TextView
+        android:text="[agama_user]"
+        android:id="@+id/agama_profile"
+        android:textSize="18dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/agama"/>
+    <!--    android:fontFamily="@font/ss_bold"-->
+
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+    <!--        android:id="@+id/back"-->
+    <!--        android:layout_width="80dp"-->
+    <!--        android:layout_height="55dp"-->
+    <!--        android:layout_alignParentRight="true"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_marginStart="320dp"-->
+    <!--        android:layout_marginTop="400dp"-->
+    <!--        android:layout_marginEnd="40dp"-->
+    <!--        android:layout_marginBottom="80dp"-->
+    <!--        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />-->
+
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="2"
+    android:orientation="horizontal">
+
+    <!--        <ImageButton-->
+    <!--            android:id="@+id/kembali"-->
+    <!--            android:layout_width="40dp"-->
+    <!--            android:layout_height="65dp"-->
+    <!--            android:scaleType="fitCenter"-->
+    <!--            android:background="@null"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:src="@drawable/back"/>-->
+    <!--        <ImageButton-->
+    <!--            android:id="@+id/lanjut"-->
+    <!--            android:layout_width="40dp"-->
+    <!--            android:layout_height="58dp"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:scaleType="fitCenter"-->
+    <!--            android:background="@null"-->
+    <!--            android:src="@drawable/next"/>-->
+
+    <LinearLayout
+        android:id="@+id/layoutmap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Latitude"/>
+        <TextView
+            android:id="@+id/latitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_alignParentEnd="true"
+            android:text="..."/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Longitude"/>
+        <TextView
+            android:id="@+id/longitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_alignParentEnd="true"
+            android:text="..."/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Altitude"/>
+        <TextView
+            android:id="@+id/altitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_alignParentEnd="true"
+            android:text="..."/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Akurasi"/>
+        <TextView
+            android:id="@+id/akurasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_alignParentEnd="true"
+            android:text="..."/>
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btn_find"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:textAllCaps="false"
+        android:text="Cari"/>
+    <Button
+        android:id="@+id/btn_simpan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:textAllCaps="false"
+        android:text="Simpan Lokasi"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp" />
+<!--    app:srcCompat="@drawable/ic_baseline_arrow_back_24"-->
+
+
+</LinearLayout>
+

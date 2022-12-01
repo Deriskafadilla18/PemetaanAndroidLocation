@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context=".RegisterSuccessActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvtv1"
+            android:text="Selamat!"
+            android:textColor="@color/colorPrimary"
+            android:textSize="40dp"
+            android:gravity="center"
+            android:fontFamily="@font/ss_semibold"
+            android:layout_marginTop="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/img1"
+            android:src="@drawable/congratulation"
+            android:layout_below="@id/tvtv1"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="220dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img1"
+            android:fontFamily="@font/ss_regular"
+            android:gravity="center"
+            android:paddingHorizontal="40dp"
+            android:text="Akun anda telah berhasil dibuat. Sekarang anda bisa masuk untuk mengakses akun anda!"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/btn_goto_login"
+            android:text="Go to login"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/ss_regular"
+            android:textAllCaps="false"
+            android:layout_marginTop="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/btn_circle_gradient"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
