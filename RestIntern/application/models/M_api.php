@@ -44,12 +44,13 @@ class M_api extends CI_Model {
 
     //-------------------------------------- UBAH PROFILE ---------------------------------------------------
 
-    // public function ubah_keluhan($id, $keluhan)
-    // {
-    //     $tanggal = date('d-m-Y');
+    public function updatePenduduk()
+    {
+        $latitude = $_POST['latitude'];
+        $longitude = $_POST['longitude'];
+        $altitude = $_POST['altitude'];
+        $nik = $_POST['nik'];
 
-    //     $this->db->query("UPDATE pengaduan SET pengaduan = '$keluhan', tanggal = '$tanggal' 
-    //                         WHERE id_pengaduan = '$id'");
-    // }
-
+        $this->db->query("UPDATE penduduk SET latitude = '$latitude', longitude = '$longitude', altitude = '$altitude' WHERE nik = '$nik'");
+    }
 }

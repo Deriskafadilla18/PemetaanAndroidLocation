@@ -88,7 +88,11 @@ class Api extends CI_Controller {
                     'nama'  => $this->M_api->get_profile($_POST['nik'])->nama,
                     'ttl'   => $this->M_api->get_profile($_POST['nik'])->tempat_lahir . ", " . $this->M_api->get_profile($_POST['nik'])->tanggal_lahir,
                     'jk'    => $this->M_api->get_profile($_POST['nik'])->jk == "L" ? "Laki-laki" : "Perempuan",
-                    'agama' => $this->M_api->get_profile($_POST['nik'])->nama_agama
+                    'agama' => $this->M_api->get_profile($_POST['nik'])->nama_agama,
+                    'alamat'=> $this->M_api->get_profile($_POST['nik'])->alamat,
+                    'latitude' => $this->M_api->get_profile($_POST['nik'])->latitude,
+                    'longitude' => $this->M_api->get_profile($_POST['nik'])->longitude,
+                    'altitude' => $this->M_api->get_profile($_POST['nik'])->altitude
                 ];
             }
         } else {
@@ -102,29 +106,28 @@ class Api extends CI_Controller {
 
     //-------------------------------------- UBAH PROFILE ------------------------------------------------
 
-    // public function ubah_profile()
-    // {
-    //     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    public function index_ubah()
+    {
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (isset($_POST['nik']) && isset($_POST['latitude']) && isset($_POST['longitude']) && isset($_POST['altitude'])) {
+                if ($this->M_api->cek_nik_register($_POST['nik'])->num_rows() == 0) {
+                    $result['value'] = "0";
+                    $result['pesan'] = "nik tidak terdaftar!";
+                } else {
+                    $this->M_api->updatePenduduk();
+                    $result['value'] = "1";
+                    $result['pesan'] = "data berhasil diubah";
+                }
+            } else {
+                $result['value'] = "0";
+                $result['pesan'] = "beberapa inputan masih kosong!";
+            }            
+        } else {
+            $result['value'] = "0";
+            $result['pesan'] = "invalid request method!";
+        }
 
-    //       if ($this->M_api->cek_nik_register($_POST['nik'])->num_rows() != 0) {
-    //             if (isset($_POST['profile'])) {
-    //                 $this->M_api->ubah_profile($_POST['id_profile'], $_POST['profile']);
-    //                 $result['value'] = "1";
-    //                 $result['pesan'] = "profile berhasil diubah!";
-    //             } else {
-    //                 $result['value'] = "0";
-    //                 $result['pesan'] = "beberapa inputan masih kosong!";
-    //             }
-    //         } else {
-    //             $result['value'] = "0";
-    //             $result['pesan'] = "id profile tidak tersedia!";
-    //         }
-    //     } else {
-    //         $result['value'] = "0";
-    //         $result['pesan'] = "invalid request method!";
-    //     }
-
-    //     echo json_encode($result);
-    // } 
+        echo json_encode($result);
+    }
     
 }

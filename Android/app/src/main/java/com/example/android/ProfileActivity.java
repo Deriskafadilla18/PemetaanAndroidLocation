@@ -46,7 +46,7 @@ public class ProfileActivity extends FragmentActivity implements OnMapReadyCallb
 
     private GoogleMap mMap;
     private Boolean oke = false;
-    private TextView nik, nama, ttl, jk, agama, latitude, longitude, altitude, akurasi, NIK, Nama, Alamat;
+    private TextView nik, nama, ttl, jk, agama, latitude, longitude, altitude, akurasi, alamat;
     private Button btnSimpan, btnCari;
     private FusedLocationProviderClient locationProviderClient;
     private static String BASE_URL = "http://192.168.110.121/RestIntern/api/";
@@ -62,6 +62,7 @@ public class ProfileActivity extends FragmentActivity implements OnMapReadyCallb
         longitude = findViewById(R.id.longitude);
         altitude = findViewById(R.id.altitude);
         akurasi = findViewById(R.id.akurasi);
+        alamat = findViewById(R.id.alamat);
         btnSimpan = findViewById(R.id.btn_simpan);
         btnCari = findViewById(R.id.btn_find);
         nik = (TextView) findViewById(R.id.nik_profile);
@@ -69,7 +70,6 @@ public class ProfileActivity extends FragmentActivity implements OnMapReadyCallb
         ttl = (TextView) findViewById(R.id.ttl_profile);
         jk = (TextView) findViewById(R.id.jk_profile);
         agama = (TextView) findViewById(R.id.agama_profile);
-//        loading = (ProgressBar) findViewById(R.id.progress_simpan);
 
         SharedPreferences sharedPreferences = ProfileActivity.this.getSharedPreferences("SIKEMAS", MODE_PRIVATE);
         PREF_NIK = sharedPreferences.getString(getString(R.string.PREF_NIK), "00000000000");
@@ -93,6 +93,7 @@ public class ProfileActivity extends FragmentActivity implements OnMapReadyCallb
         String lon = longitude.getText().toString().trim();
         String al = altitude.getText().toString().trim();
         String ak = akurasi.getText().toString().trim();
+//        String alm = alamat.getText().toString().trim();
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, BASE_URL+"index_ubah",
                 new Response.Listener<String>() {
@@ -120,6 +121,7 @@ public class ProfileActivity extends FragmentActivity implements OnMapReadyCallb
                 params.put("latitude", lat);
                 params.put("longitude", lon);
                 params.put("altitude", al);
+//                params.put("alamat", alm);
                 params.put("nik", PREF_NIK);
                 return params;
             }
@@ -130,14 +132,6 @@ public class ProfileActivity extends FragmentActivity implements OnMapReadyCallb
     }
 
     private void profile(final String PREF_NIK) {
-//        loading.setVisibility(View.VISIBLE);
-//        btnSimpan.setVisibility(View.GONE);
-//
-//        final String lat = this.latitude.getText().toString().trim();
-//        final String lon = this.longitude.getText().toString().trim();
-//        final String al = this.altitude.getText().toString().trim();
-//        final String ak = this.akurasi.getText().toString().trim();
-
         StringRequest stringRequest = new StringRequest(Request.Method.POST, BASE_URL+"profile",
                 new Response.Listener<String>() {
                     @Override
@@ -153,6 +147,7 @@ public class ProfileActivity extends FragmentActivity implements OnMapReadyCallb
                                 ttl.setText(hasil.getString("ttl").trim());
                                 jk.setText(hasil.getString("jk").trim());
                                 agama.setText(hasil.getString("agama").trim());
+                                alamat.setText(hasil.getString("alamat").trim());
                             } else {
                                 Toast.makeText(ProfileActivity.this, pesan, Toast.LENGTH_LONG).show();
                             }
