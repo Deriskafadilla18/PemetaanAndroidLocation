@@ -49,9 +49,9 @@ public class ProfileActivity extends FragmentActivity implements OnMapReadyCallb
     private TextView nik, nama, ttl, jk, agama, latitude, longitude, altitude, akurasi, alamat;
     private Button btnSimpan, btnCari;
     private FusedLocationProviderClient locationProviderClient;
-    private static String BASE_URL = "http://192.168.110.121/RestIntern/api/";
+    private static String BASE_URL = "http://192.168.175.68/RestIntern/api/";
     private String PREF_NIK;
-    private ProgressBar loading;
+//    private ProgressBar loading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,7 +93,7 @@ public class ProfileActivity extends FragmentActivity implements OnMapReadyCallb
         String lon = longitude.getText().toString().trim();
         String al = altitude.getText().toString().trim();
         String ak = akurasi.getText().toString().trim();
-//        String alm = alamat.getText().toString().trim();
+        String alm = alamat.getText().toString().trim();
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, BASE_URL+"index_ubah",
                 new Response.Listener<String>() {
@@ -121,7 +121,7 @@ public class ProfileActivity extends FragmentActivity implements OnMapReadyCallb
                 params.put("latitude", lat);
                 params.put("longitude", lon);
                 params.put("altitude", al);
-//                params.put("alamat", alm);
+                params.put("alamat", alm);
                 params.put("nik", PREF_NIK);
                 return params;
             }

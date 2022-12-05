@@ -18,25 +18,55 @@
     android:background="@drawable/img"
     tools:context=".ProfileActivity" >
 
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="6dp"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="showMenu"
+            android:padding="8dp"
+            android:src="@drawable/ic_more_menu" />
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:background="@color/colorPrimaryDark"
-        android:padding="12dp"
-        android:onClick="showMenu"
-        android:src="@drawable/ic_more_menu" />
-
-
-    <RelativeLayout
+        <RelativeLayout
         android:id="@+id/_navbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="37dp"
-        android:paddingVertical="15dp">
+        android:paddingHorizontal="40dp"
+        android:paddingVertical="10dp">
+
+        <ImageView
+            android:id="@+id/_image1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/logo_apk" />
+
+            <TextView
+                android:id="@+id/_textview1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/_image1"
+                android:fontFamily="@font/ss_bold"
+                android:text="PEMETAAN LOKASI PENDUDUK"
+                android:textColor="@android:color/background_dark"
+                android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/_textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/_textview1"
+            android:layout_toRightOf="@id/_image1"
+            android:fontFamily="@font/ss_bold"
+            android:text="@string/desa"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp" />
     </RelativeLayout>
     <TextView
         android:id="@+id/NIK"
@@ -147,6 +177,28 @@
         android:fontFamily="@font/ss_bold"
         android:layout_below="@+id/agama"/>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alamat "
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/ss_bold"
+                android:textColor="@color/black" />
+            <EditText
+                android:id="@+id/alamat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:hint="Masukkan Alamat Lengkap anda"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
 <!--        <TextView-->
 <!--            android:id="@+id/alamat"-->
 <!--            android:text="Alamat"-->
@@ -179,22 +231,7 @@
             android:layout_height="300dp" />
     </LinearLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:text="Alamat "/>
-            <TextView
-                android:id="@+id/alamat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:layout_alignParentEnd="true"
-                android:text="..."/>
-        </RelativeLayout>
+
 
     <RelativeLayout
         android:layout_width="match_parent"

@@ -2,7 +2,10 @@
     <string name="app_name">PEMETAAN LOKASI PENDUDUK </string>
     <string name="siPLP">SISTEM PEMETAAN LOKASI PENDUDUK </string>
     <string name="desa">KOTA BLITAR</string>
-
+    <string-array name="usertype">
+        <item>user</item>
+        <item>admin</item>
+    </string-array>
     <string name="PREF_NIK">0000000000</string>
 
     <string name="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam.</string>

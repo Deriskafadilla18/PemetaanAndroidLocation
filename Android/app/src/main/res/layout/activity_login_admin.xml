@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="200dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:background="@drawable/img"
+        tools:context=".LoginAdminActivity" >
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:gravity="end"
+            android:textColor="@color/colorPrimary"
+            android:paddingRight="10dp"
+            android:text="Halaman Admin"
+            android:fontFamily="@font/ss_semibold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="150dp"
+            android:gravity="center_horizontal"
+            android:text="Login Admin"
+            android:textSize="40sp"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/ss_semibold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:gravity="center_horizontal"
+            android:text="Aplikasi Sistem Pemetaan Lokasi"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/ss_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:gravity="center_horizontal"
+            android:text="Penduduk Kota Blitar"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/ss_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/username_login"
+            android:elevation="1dp"
+            android:inputType="textPersonName"
+            android:layout_marginTop="45dp"
+            android:paddingHorizontal="20dp"
+            android:drawableEnd="@drawable/icon_user_login"
+            android:drawableRight="@drawable/icon_user_login"
+            android:background="@drawable/btn_circle"
+            android:hint="Username"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"/>
+
+        <EditText
+            android:id="@+id/password_login"
+            android:elevation="1dp"
+            android:inputType="textPassword"
+            android:layout_marginTop="16dp"
+            android:paddingHorizontal="20dp"
+            android:drawableEnd="@drawable/icon_lock_login"
+            android:drawableRight="@drawable/icon_lock_login"
+            android:background="@drawable/btn_circle"
+            android:hint="Password"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"/>
+
+<!--        <TextView-->
+<!--            android:id="@+id/_textview1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="20dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginLeft="5dp"-->
+<!--            android:text="User Type"-->
+<!--            android:textSize="15dp"-->
+<!--            android:textColor="@color/colorPrimary"-->
+<!--            tools:layout_editor_absoluteX="16dp"-->
+<!--            tools:layout_editor_absoluteY="199dp"/>-->
+        <!--        <EditText-->
+        <!--            android:id="@+id/txtUser"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:ems="10"-->
+        <!--            android:inputType="textPersonName"-->
+        <!--            android:text=""-->
+        <!--            tools:layout_editor_absoluteX="153dp"-->
+        <!--            tools:layout_editor_absoluteY="16dp"/>-->
+<!--        <Spinner-->
+<!--            android:id="@+id/spinner"-->
+<!--            android:layout_width="207dp"-->
+<!--            android:layout_height="42dp"-->
+<!--            tools:layout_editor_absoluteX="161dp"-->
+<!--            tools:layout_editor_absoluteY="175dp"-->
+<!--            android:outlineAmbientShadowColor="@color/colorPrimary"-->
+<!--            android:outlineSpotShadowColor="@color/black"/>-->
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="end"
+            android:textAllCaps="false"
+            android:background="@drawable/btn_circle_gradient"
+            android:drawableRight="@drawable/right_arrow"
+            android:text="Masuk"
+            android:paddingHorizontal="30dp"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ProgressBar
+            android:id="@+id/progress_login"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btn_loginusr"
+            android:layout_width="354dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="110dp"
+            android:text="Masuk sebagai Pengguna"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+</ScrollView>

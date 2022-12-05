@@ -6,10 +6,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-import android.widget.TextView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -26,31 +27,45 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+public class LoginAdminActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText et_user, et_pass;
-    private Button btn_login,btn_loginadm;
-    private TextView tv_register, tv_bantuan;
+    private Button btn_login, btn_loginusr;
     private ProgressBar loading;
-    private static String URL_LOGIN = "http://192.168.175.68/RestIntern/api/login";
+    private Spinner spinner;
+    private static String URL_LOGIN = "http://192.168.175.68/RestIntern/api/login_admin";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_login_admin);
 
         et_user     = (EditText) findViewById(R.id.username_login);
         et_pass     = (EditText) findViewById(R.id.password_login);
         btn_login   = (Button) findViewById(R.id.btn_login);
-        btn_loginadm   = (Button) findViewById(R.id.btn_loginadm);
-        tv_register = (TextView) findViewById(R.id.tv_register);
-        tv_bantuan  = (TextView) findViewById(R.id.tv_bantuan);
+        btn_loginusr = (Button) findViewById(R.id.btn_loginusr);
         loading     = (ProgressBar) findViewById(R.id.progress_login);
+//        spinner = (Spinner)findViewById(R.id.spinner);
+//        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.usertype, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
+//        spinner.setAdapter(adapter);
 
-        tv_register.setOnClickListener(this);
-        tv_bantuan.setOnClickListener(this);
+        btn_loginusr.setOnClickListener(this);
         btn_login.setOnClickListener(this);
-        btn_loginadm.setOnClickListener(this);
+//        btn_login.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                String item = spinner.getSelectedItem().toString();
+//                if (et_user.getText().toString().equals("admin") && et_pass.getText().toString().equals("admin") && item.equals("admin"))
+//                    Intent intent = new Intent(LoginadmActivity.this, AdminActivity.class);
+//                startActivity(intent);
+//
+//            }else if(et_user.getText().toString().equals("admin") && et_pass.getText().toString().equals("admin") && item.equals("user")){
+//                Intent intent = new Intent(LoginadmActivity.this, ProfileActivity.class);
+//                startActivity(intent);
+//            }else {
+//                Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
+//        }
+//        });
 
     }
 
@@ -66,14 +81,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 et_user.setError("Masukkan Username!");
                 et_pass.setError("Masukkan Password!");
             }
-        } else if (v == tv_register) {
-            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-            startActivity(intent);
-        } else if (v == tv_bantuan) {
-            Intent intent = new Intent(LoginActivity.this, BantuanActivity.class);
-            startActivity(intent);
-        } else if (v == btn_loginadm) {
-            Intent intent = new Intent(LoginActivity.this, LoginAdminActivity.class);
+        } else if (v == btn_loginusr) {
+            Intent intent = new Intent(LoginAdminActivity.this, LoginActivity.class);
             startActivity(intent);
         }
     }
@@ -90,29 +99,29 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             JSONObject jsonObject = new JSONObject(response);
                             String value = jsonObject.getString("value");
                             String pesan = jsonObject.getString("pesan");
-                            String nik   = jsonObject.getString("nik");
+                            String id_admin   = jsonObject.getString("id_admin");
                             if (value.equals("1")){
 
-                                SharedPreferences sharedPreferences = LoginActivity.this.getSharedPreferences("SIKEMAS", MODE_PRIVATE);
+                                SharedPreferences sharedPreferences = LoginAdminActivity.this.getSharedPreferences("SIKEMAS", MODE_PRIVATE);
                                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                                editor.putString(getString(R.string.PREF_NIK), nik);
+                                editor.putString(getString(R.string.PREF_NIK), id_admin);
                                 editor.commit();
 
-                                Toast.makeText(LoginActivity.this, "Login Sukses!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginAdminActivity.this, "Login Sukses!", Toast.LENGTH_SHORT).show();
 
-                                Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
+                                Intent intent = new Intent(LoginAdminActivity.this, isi_admin.class);
                                 startActivity(intent);
 
                                 loading.setVisibility(View.GONE);
                                 btn_login.setVisibility(View.VISIBLE);
                             } else {
-                                Toast.makeText(LoginActivity.this, "Gagal Login! " + pesan, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginAdminActivity.this, "Gagal Login! " + pesan, Toast.LENGTH_SHORT).show();
                                 loading.setVisibility(View.GONE);
                                 btn_login.setVisibility(View.VISIBLE);
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
-                            Toast.makeText(LoginActivity.this, "Login Error! " + e.toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginAdminActivity.this, "Login Error! " + e.toString(), Toast.LENGTH_SHORT).show();
                             loading.setVisibility(View.GONE);
                             btn_login.setVisibility(View.VISIBLE);
                         }
@@ -121,7 +130,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(LoginActivity.this, "Error! " + error.toString(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginAdminActivity.this, "Error! " + error.toString(), Toast.LENGTH_SHORT).show();
                         loading.setVisibility(View.GONE);
                         btn_login.setVisibility(View.VISIBLE);
                     }

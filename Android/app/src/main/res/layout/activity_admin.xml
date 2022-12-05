@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".AdminActivity">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/colorPrimary"
+        android:padding="12dp"
+        android:onClick="showMenu"
+        android:src="@drawable/ic_more_menu" />
+
+    <RelativeLayout
+        android:id="@+id/_navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="37dp"
+        android:paddingVertical="15dp">
+
+        <ImageView
+            android:id="@+id/_image1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/logo_apk" />
+
+        <TextView
+            android:id="@+id/_textview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/_image1"
+            android:fontFamily="@font/ss_bold"
+            android:text="PAEMETAAN LOKASI PENDUDUK"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/_textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/_textview1"
+            android:layout_toRightOf="@id/_image1"
+            android:fontFamily="@font/ss_bold"
+            android:text="@string/desa"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/_navbar"
+        android:background="@drawable/bg_top_radius"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="20dp">
+
+<!--        <TextView-->
+<!--            android:id="@+id/_textview3"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/ss_light"-->
+<!--            android:text="Dashboard | "-->
+<!--            android:textColor="@android:color/black"-->
+<!--            android:textSize="16sp" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/username_dashboard"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_toRightOf="@id/_textview3"-->
+<!--            android:fontFamily="@font/ss_light"-->
+<!--            android:text="[nama_user]"-->
+<!--            android:textColor="@android:color/black"-->
+<!--            android:textSize="16sp" />-->
+
+<!--        <ListView-->
+<!--            android:id="@+id/lisView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_below="@+id/username_dashboard">-->
+<!--        </ListView>-->
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/float_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="27dp"
+            android:layout_marginRight="27dp"
+            android:layout_marginBottom="24dp"
+            android:contextClickable="true"
+            android:src="@drawable/ic_add"
+            app:backgroundTint="@color/colorPrimary"
+            app:elevation="0dp"
+            app:fabCustomSize="60dp"
+            app:maxImageSize="40dp" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
