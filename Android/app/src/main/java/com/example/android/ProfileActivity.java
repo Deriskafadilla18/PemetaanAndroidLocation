@@ -49,7 +49,7 @@ public class ProfileActivity extends FragmentActivity implements OnMapReadyCallb
     private TextView nik, nama, ttl, jk, agama, latitude, longitude, altitude, akurasi, alamat;
     private Button btnSimpan, btnCari;
     private FusedLocationProviderClient locationProviderClient;
-    private static String BASE_URL = "http://192.168.175.68/RestIntern/api/";
+    private static String BASE_URL = "http://192.168.110.121/pemetaan/api/";
     private String PREF_NIK;
 //    private ProgressBar loading;
 

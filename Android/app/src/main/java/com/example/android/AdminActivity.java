@@ -32,7 +32,7 @@ public class AdminActivity extends AppCompatActivity implements View.OnClickList
 
 //    private TextView dash_name, total_kel, belum_kel, sudah_kel, tolak_kel;
     private FloatingActionButton actionButton;
-    private static String BASE_URL = "http://192.168.175.68/RestIntern/api/admin";
+    private static String BASE_URL = "http://192.168.110.121/RestIntern/api/admin";
     private String PREF_NIK;
 
     @Override

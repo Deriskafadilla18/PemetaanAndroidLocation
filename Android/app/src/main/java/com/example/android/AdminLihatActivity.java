@@ -30,8 +30,8 @@ public class AdminLihatActivity extends AppCompatActivity implements View.OnClic
     private TextView isi_kel, tgl_kel, status, admin;
     private Button btn_ubah, btn_hapus;
     private String id_keluhan;
-    private static String BASE_URL = "http://192.168.43.238/sikemas/api/get_keluhan_id";
-    private static String URL_HAPUS = "http://192.168.43.238/sikemas/api/hapus_keluhan";
+    private static String BASE_URL = "http://192.168.110.121/sikemas/api/get_keluhan_id";
+    private static String URL_HAPUS = "http://192.168.110.121/sikemas/api/hapus_keluhan";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

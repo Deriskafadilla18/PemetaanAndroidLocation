@@ -6,6 +6,17 @@
         <item>user</item>
         <item>admin</item>
     </string-array>
+    <string-array name="agama">
+        <item>Islam</item>
+        <item>Kristen</item>
+        <item>Hindu</item>
+        <item>Budha</item>
+        <item>Konghuchu</item>
+    </string-array>
+    <string-array name="jk">
+        <item>Laki-Laki</item>
+        <item>Perempuan</item>
+    </string-array>
     <string name="PREF_NIK">0000000000</string>
 
     <string name="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam.</string>

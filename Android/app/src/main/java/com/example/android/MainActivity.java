@@ -45,7 +45,7 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
     private TextView nik, nama, ttl, jk, agama;
-    private static String BASE_URL = "http://192.168.175.68/RestIntern/api/profile";
+    private static String BASE_URL = "http://192.168.110.121/pemetaan/api/profile";
     private String PREF_NIK;
 
     @Override

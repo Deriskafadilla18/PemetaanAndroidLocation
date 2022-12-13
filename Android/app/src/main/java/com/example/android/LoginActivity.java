@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private Button btn_login,btn_loginadm;
     private TextView tv_register, tv_bantuan;
     private ProgressBar loading;
-    private static String URL_LOGIN = "http://192.168.175.68/RestIntern/api/login";
+    private static String URL_LOGIN = "http://192.168.110.121/pemetaan/api/login";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

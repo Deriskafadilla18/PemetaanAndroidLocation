@@ -33,7 +33,7 @@ public class LoginAdminActivity extends AppCompatActivity implements View.OnClic
     private Button btn_login, btn_loginusr;
     private ProgressBar loading;
     private Spinner spinner;
-    private static String URL_LOGIN = "http://192.168.175.68/RestIntern/api/login_admin";
+    private static String URL_LOGIN = "http://192.168.110.121/pemetaan/api/login_admin";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,7 +109,7 @@ public class LoginAdminActivity extends AppCompatActivity implements View.OnClic
 
                                 Toast.makeText(LoginAdminActivity.this, "Login Sukses!", Toast.LENGTH_SHORT).show();
 
-                                Intent intent = new Intent(LoginAdminActivity.this, isi_admin.class);
+                                Intent intent = new Intent(LoginAdminActivity.this, AdminPenduduk.class);
                                 startActivity(intent);
 
                                 loading.setVisibility(View.GONE);

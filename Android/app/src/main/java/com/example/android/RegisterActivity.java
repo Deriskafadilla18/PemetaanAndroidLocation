@@ -33,7 +33,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private Button btn_register;
     private TextView tv_login;
     private ProgressBar loading;
-    private static String URL_REGIST = "http://192.168.175.68/RestIntern/api/register";
+    private static String URL_REGIST = "http://192.168.110.121/pemetaan/api/register";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
