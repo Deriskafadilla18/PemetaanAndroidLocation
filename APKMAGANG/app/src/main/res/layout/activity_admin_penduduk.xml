@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="100dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:background="@drawable/img"
+        tools:context=".AdminPenduduk" >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorPrimary"
+            android:padding="12dp"
+            android:onClick="showMenu"
+            android:src="@drawable/ic_more_menu" />
+        <RelativeLayout
+            android:id="@+id/_navbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="37dp"
+            android:paddingVertical="15dp">
+
+            <ImageView
+                android:id="@+id/_image1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/logo_apk" />
+            <TextView
+                android:id="@+id/_textview1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/_image1"
+                android:fontFamily="@font/ss_bold"
+                android:text="PEMETAAN LOKASI PENDUDUK"
+                android:textColor="@android:color/background_dark"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/_textview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/_textview1"
+                android:layout_toRightOf="@id/_image1"
+                android:fontFamily="@font/ss_bold"
+                android:text="@string/desa"
+                android:textColor="@android:color/background_dark"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_data"
+            android:layout_width="match_parent"
+            android:layout_height="338dp"
+            android:layout_above="@+id/linear"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="0dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_addData"
+                android:layout_width="149dp"
+                android:paddingHorizontal="10dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/btn_circle_blue"
+                android:text="TAMBAH DATA" />
+
+            <Button
+                android:id="@+id/btn_updateData"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_weight="1"
+                android:background="@drawable/btn_circle_blue"
+                android:drawableLeft="@drawable/ic_edit"
+                android:paddingHorizontal="10dp"
+                android:text="Ubah"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite" />
+
+            <Button
+                android:id="@+id/btn_deleteData"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_circle_red"
+                android:drawableLeft="@drawable/ic_delete"
+                android:paddingHorizontal="10dp"
+                android:textAllCaps="false"
+                android:text="Delete"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+<!--            <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                android:id="@+id/float_add"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:layout_marginEnd="27dp"-->
+<!--                android:layout_marginRight="27dp"-->
+<!--                android:layout_marginBottom="24dp"-->
+<!--                android:contextClickable="true"-->
+<!--                android:src="@drawable/ic_add"-->
+<!--                app:backgroundTint="@color/colorPrimary"-->
+<!--                app:elevation="0dp"-->
+<!--                app:fabCustomSize="60dp"-->
+<!--                app:maxImageSize="40dp" />-->
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

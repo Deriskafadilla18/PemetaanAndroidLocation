@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingVertical="16dp"
+    android:paddingHorizontal="45dp"
+    android:id="@+id/parent_login"
+    android:background="@drawable/img"
+    tools:context=".AdminTambah">
+
+    <TextView
+        android:layout_marginTop="80dp"
+        android:gravity="center_horizontal"
+        android:text="Tambah Data Penduduk"
+        android:textSize="40sp"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/ss_semibold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="20dp"
+        android:text="Isi data sesuai dengan data asli"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/ss_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/nik_add"
+        android:elevation="1dp"
+        android:inputType="number"
+        android:layout_marginTop="30dp"
+        android:paddingHorizontal="20dp"
+        android:background="@drawable/btn_circle"
+        android:hint="NIK KTP"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+
+
+
+    <EditText
+        android:id="@+id/nama"
+        android:elevation="1dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:inputType="textPersonName"
+        android:paddingHorizontal="20dp"
+        android:background="@drawable/btn_circle"
+        android:hint="Nama"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+
+
+    <EditText
+        android:id="@+id/tempat_lahir"
+        android:elevation="1dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="20dp"
+        android:background="@drawable/btn_circle"
+        android:hint="Tempat Lahir"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+
+    <EditText
+        android:id="@+id/tanggal_lahir"
+        android:elevation="1dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="20dp"
+        android:background="@drawable/btn_circle"
+        android:hint="Tanggal Lahir (dd-mm-yyyy)"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+
+    <Button
+        android:id="@+id/btn_tambah"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="end"
+        android:textAllCaps="false"
+        android:background="@drawable/btn_circle_gradient"
+        android:text="Tambah Data"
+        android:paddingHorizontal="30dp"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progress_register"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:text="Kembali"
+            android:fontFamily="@font/ss_regular"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".AdminView">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="36dp"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ss_bold"
+                android:text="Detail Profile"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/NIK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/username_dashboard"
+                android:fontFamily="@font/ss_regular"
+                android:text="NIK"
+                android:textColor="@color/black" />
+            <!--        -->
+
+
+            <TextView
+                android:id="@+id/nik_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/NIK"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/ss_bold"
+                android:text="[nik_user]"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <!--        </LinearLayout>-->
+
+            <TextView
+                android:id="@+id/nama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nik_profile"
+                android:fontFamily="@font/ss_regular"
+                android:text="Nama"
+                android:textColor="@color/black" />
+            <!--        -->
+
+            <TextView
+                android:id="@+id/nama_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nama"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/ss_bold"
+                android:text="[nama_user]"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+            <!--    -->
+
+            <TextView
+                android:id="@+id/ttl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nama_profile"
+                android:fontFamily="@font/ss_regular"
+                android:text="Tempat, Tanggal Lahir"
+                android:textColor="@color/black" />
+            <!--    -->
+
+            <TextView
+                android:id="@+id/ttl_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ttl"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/ss_bold"
+                android:text="[ttl_user]"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+            <!--    -->
+
+            <TextView
+                android:id="@+id/jk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ttl_profile"
+                android:fontFamily="@font/ss_regular"
+                android:text="Jenis Kelamin"
+                android:textColor="@color/black" />
+            <!--    -->
+            <TextView
+                android:id="@+id/jk_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/jk"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/ss_bold"
+                android:text="[jk_user]"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+            <!--    -->
+
+            <TextView
+                android:id="@+id/agama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/jk_profile"
+                android:fontFamily="@font/ss_regular"
+                android:text="Agama"
+                android:textColor="@color/black" />
+            <!--    -->
+            <TextView
+                android:id="@+id/agama_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/agama"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/ss_bold"
+                android:text="[agama_user]"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:paddingHorizontal="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_keluhan_form_ubah"
+            android:layout_weight="1"
+            android:paddingHorizontal="40dp"
+            android:drawableLeft="@drawable/ic_delete"
+            android:background="@drawable/btn_circle_blue"
+            android:textColor="@color/colorWhite"
+            android:textAllCaps="false"
+            android:text="Hapus Data"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btn_keluhan_hapus"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:paddingHorizontal="40dp"
+            android:drawableLeft="@drawable/ic_edit"
+            android:background="@drawable/btn_circle_red"
+            android:textColor="@color/colorWhite"
+            android:textAllCaps="false"
+            android:text="Edit Data"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
